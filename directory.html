@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+
+  <link rel='stylesheet' href='assets/css/style.css'>
+  <script src='assets/js/jquery-1.8.3.min.js'></script>
+<script src='assets/js/app.js'></script>
+
+
+  <title>Symfony.ch</title>
+
+</head>
+
+<body>
+
+
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+
+
+<div class="directory">
+      <header class="container top-isolated">
+
+      <div class="row">
+        <div class="col col-lg-7">
+          <div class="logo">
+            <img src="assets/img/logo_symfony.png" alt="">
+            <h2>Swiss community</h2>
+          </div>
+        </div>
+        <div class="col col-lg-5">
+          <div class="navbar navbar-inverse">
+            <a class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a class="navbar-brand" href="/">&nbsp;</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li class='current'><a class='current' href="directory.html">Directory</a></li>
+                <li><a href="about.html">About</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+  <div class="jumbotron symfony-jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col col-lg-12">
+          <h1>Directory</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, qui, ea, esse, suscipit ullam beatae vero maiores quos pariatur laborum nulla quia fugiat quasi vitae accusamus sequi delectus natus deserunt.
+          </p>
+          <p>
+            <a href="#add-yourself" class="btn btn-info">Add your company</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col col-lg-4">
+        <div class="well">
+          <h3>Company name</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, saepe assumenda doloremque voluptatem nihil quibusdam sint mollitia perferendis! Id.<br/>
+            <a href="#">Acme.com</a>
+          </p>
+          <p>
+            <span class="label">Zurich</span>
+            <span class="label">13 employes</span>
+            <span class="label">Twig</span>
+          </p>
+        </div>
+      </div>
+      <div class="col col-lg-4">
+        <div class="well">
+          <h3>Company name</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, saepe assumenda doloremque voluptatem nihil quibusdam sint mollitia perferendis! Id.<br/>
+            <a href="#">Acme.com</a>
+          </p>
+          <p>
+            <span class="label">Zurich</span>
+            <span class="label">13 employes</span>
+            <span class="label">Twig</span>
+          </p>
+        </div>
+      </div>
+      <div class="col col-lg-4">
+        <div class="well">
+          <h3>Company name</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, saepe assumenda doloremque voluptatem nihil quibusdam sint mollitia perferendis! Id.<br/>
+            <a href="#">Acme.com</a>
+          </p>
+          <p>
+            <span class="label">Zurich</span>
+            <span class="label">13 employes</span>
+            <span class="label">Twig</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer>
+    
+  </footer>
+  
+  <script src='assets/bootstrap/js/tab.js'></script>
+<script src='assets/bootstrap/js/alert.js'></script>
+<script src='assets/bootstrap/js/affix.js'></script>
+<script src='assets/bootstrap/js/modal.js'></script>
+<script src='assets/bootstrap/js/button.js'></script>
+<script src='assets/bootstrap/js/tooltip.js'></script>
+<script src='assets/bootstrap/js/popover.js'></script>
+<script src='assets/bootstrap/js/carousel.js'></script>
+<script src='assets/bootstrap/js/dropdown.js'></script>
+<script src='assets/bootstrap/js/collapse.js'></script>
+<script src='assets/bootstrap/js/scrollspy.js'></script>
+<script src='assets/bootstrap/js/transition.js'></script>
+
+</body>
+
+</html>
